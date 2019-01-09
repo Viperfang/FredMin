@@ -1,6 +1,6 @@
 # FredMin - Ver 1.0
 
-Download Link:
+Download Stable:
 https://raw.githubusercontent.com/sn0wlink/FredMin/master/FredMin-1.0.zip
 
 A super small and lightweight Server Administration Tool small enough to fit on a floppy disk.
