@@ -62,7 +62,7 @@ echo '<br /><strong>Server Load:</strong><br />';
 // Footer Infomation
 	echo '<br />';
 	echo "<p class='copyright'>&copy; 2016 Fred
-	<br />Powered by Tea</p>";
+	<br />Powered by Tea &amp; 1 Jammie Dodger</p>";
 	
 	
 // Ping Services for Online Status
