@@ -23,3 +23,6 @@ Have fun, and run with it!
 ## Screenshot
 
 ![image](https://raw.githubusercontent.com/sn0wlink/FredMin/master/screenshot.png)
+
+Contibutors:
+With great thanks to Ben Viperfang Bewick

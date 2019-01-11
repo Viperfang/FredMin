@@ -26,16 +26,16 @@ $currentip = shell_exec('hostname -I');
 echo "<p class='menu-header'>Edit IP Address</p><br />";
 
 // Displays current IP address
-echo "Your servers IP address is: $currentip"; 
+echo "Your servers IP address is: $currentip";
 
 // Generate Form
 echo "<form name='form' method='post' action='edit-ip.php'>
         <input name='text_box' value='$currentip'>
         <input type='submit' id='search-submit' value='Save' />
-    </form> 
-";
+    </form>
+    ";
 
-// Displays current IP config 
+// Displays current IP config
 
 // Test Print New Config
 
@@ -43,12 +43,12 @@ echo "<form name='form' method='post' action='edit-ip.php'>
 $text_box = $_POST["text_box"];
 
 if ($text_box != ""){
-    
+
     $srchreplace = str_replace($currentip,$text_box,$readfile);
     echo $srchreplace;
     shell_exec('echo $srchreplace | sudo tee /var/www/html/FredMin/modules/test.txt');
-}	
+}
 
 // Footer
-include ('foot.php');      
+include ('foot.php');
 ?>
