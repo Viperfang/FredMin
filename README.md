@@ -24,5 +24,5 @@ Have fun, and run with it!
 
 ![image](https://raw.githubusercontent.com/sn0wlink/FredMin/master/screenshot.png)
 
-Contibutors:
+Contributors:
 With great thanks to Ben Viperfang Bewick
