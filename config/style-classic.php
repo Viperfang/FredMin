@@ -1,18 +1,18 @@
 /*
 
 	David Collins-Cubit
-	2018
-	FredMin NiNite
+	2016
+	F*Panel Supa Lite
 	Control Panel for Web Developers
 
 */
 
 body {
-	background-color: #282728;
+	background-color: #eaeaea;
 }
 
 div.header {
-	background-color: #4b4a4c;
+	background-color: #ffffff;
 	width: 100%;
 	height: 90px;
 	top: 0;
@@ -21,7 +21,6 @@ div.header {
 }
 
 img.logo {
-	opacity: 0;
 	height: 90px;
 	top: 0;
 	left: 0;
@@ -29,12 +28,12 @@ img.logo {
 }
 
 p.pagetitle {
-	color: #e5e5e5;
+	color: #000000;
 	position: absolute;
 	width: 100%;
 	top: 10px;
 	text-align: center;
-	font-family: arial, helvetica, dejavu;
+	font-family: arial;
 	font-size: 20pt;
 	font-weight: bold;
 }
@@ -42,16 +41,17 @@ p.pagetitle {
 p.menu-header {
 	font-weight: bold;
 	text-align: center;
-	background-color: #4e4e4e;
-	color: #e5e5e5;
+	border-width: 1px;
+	border-color: #dcdfe5;
+	border-style: solid;
+	background-color: #e8e8e8;
+	color: #000000;
 	font-size: 10pt;
-        font-family: arial, helvetica, dejavu;
 }
 
 div.menu {
-	background-color: #5e5e5e;
-	color: #e4e4e4;
-        height: 100%;
+	background-color: #ffffff;
+	height: 100%;
 	width: 160px;
 	position: fixed;
 	top: 0;
@@ -60,18 +60,11 @@ div.menu {
 	padding: 10px;
 	font-family: arial;
 	font-size:10pt;
-        font-family: arial, helvetica, dejavu;
-
-}
-
-a {
-        color: #e5e5e5;
 }
 
 p.copyright {
 	font-size: 10pt;
-	color: #e5e5e5;
-        font-family: arial, helvetica, dejavu;
+	color:grey;
 	bottom: 0;
 	left: 0;
 	padding: 10px;
@@ -93,19 +86,17 @@ div.content {
 	margin-left: 200px;
 	margin-right: 20px;
 	margin-bottom: 50px;
-        color: #e5e5e5;
-	background-color: #5e5e5e;
+	background-color: #ffffff;
 	border:2px;
 	padding: 20px;
 	font-family: arial;
 	text-align: left;
-        font-family: arial, helvetica, dejavu;
 }
 
 div.catout {
 	white-space: pre-line;
-        font-family:courier;
-        font-size:10pt;
+    font-family:courier;
+    font-size:10pt;
 }
 
 img.icon {
@@ -116,12 +107,11 @@ div.icon {
 	display: inline-block;
 	padding-right: 40px;
 	text-align: center;
-	color: #e5e5e5;
 }
 
 a.icon {
 	text-align: center;
 	font-size: 11px;
-	color: #e5e5e5;
+	color: #315389;
 	text-decoration: none;
 }

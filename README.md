@@ -8,6 +8,9 @@ Weighing in at under 50kb including images, this powerful little beast will happ
 
 *Just remember to put it in a password protected folder.
 
+## Latest News
+Development on a new theme has begun. Slick will be released as a dark theme for FredMin because, well, we can.
+
 ## Installation
 - You will need to install sshpass
 run command: sudo apt-get install sshpass -y
