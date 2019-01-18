@@ -9,22 +9,44 @@ include ('head.php');
 include ('../functions.php');
 
 echo "<p class='menu-header'>Reset User Password</p><br />
-      Command to execute";
+      Change existing user password <br /><br />";
+      
 echo "<form name='form' method='post' action='passwd-change.php'>
-        Username: <input name='$userset' size='40' value=''><br />
-        Password: <input name='$passwd' size='40' value=''><br />
-        <input type='submit' id='search-submit' value='Run' />
+        <table>
+        <tr>
+            <td>
+            Username: 
+            </td>
+        
+            <td>
+            <input name='$userset' size='40' value=''>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+            Password:
+            </td>
+        
+            <td>
+            <input name='$passwd' size='40' value=''>
+            </td>
+        </tr>
+        
+        <tr>
+        <td>
+        <input type='submit' id='search-submit' value='Change' />
+        </td>
+        </tr>
+        
+        </table>
+        
     </form>
 ";
 
-// Command Line Password Changer
-// $userset
-// $passwd
-// 
-
 $text_box = $_POST["text_box"];
 if ($text_box != ""){
-    $cmdline = shell_exec("echo -e '$passwd\n$passwd' | passwd $userset");
+    $cmdline = shell_exec("echo -e '$passwd\n$passwd' | sudo passwd $userset");
     echo "<pre>$cmdline</pre>";    
 }
 

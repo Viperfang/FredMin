@@ -45,13 +45,13 @@ p.menu-header {
 	background-color: #4e4e4e;
 	color: #e5e5e5;
 	font-size: 10pt;
-        font-family: arial, helvetica, dejavu;
+    font-family: arial, helvetica, dejavu;
 }
 
 div.menu {
 	background-color: #5e5e5e;
 	color: #e4e4e4;
-        height: 100%;
+    height: 100%;
 	width: 160px;
 	position: fixed;
 	top: 0;
@@ -60,18 +60,18 @@ div.menu {
 	padding: 10px;
 	font-family: arial;
 	font-size:10pt;
-        font-family: arial, helvetica, dejavu;
+    font-family: arial, helvetica, dejavu;
 
 }
 
 a {
-        color: #e5e5e5;
+    color: #e5e5e5;
 }
 
 p.copyright {
 	font-size: 10pt;
 	color: #e5e5e5;
-        font-family: arial, helvetica, dejavu;
+    font-family: arial, helvetica, dejavu;
 	bottom: 0;
 	left: 0;
 	padding: 10px;
@@ -93,19 +93,19 @@ div.content {
 	margin-left: 200px;
 	margin-right: 20px;
 	margin-bottom: 50px;
-        color: #e5e5e5;
+    color: #e5e5e5;
 	background-color: #5e5e5e;
 	border:2px;
 	padding: 20px;
 	font-family: arial;
 	text-align: left;
-        font-family: arial, helvetica, dejavu;
+    font-family: arial, helvetica, dejavu;
 }
 
 div.catout {
 	white-space: pre-line;
-        font-family:courier;
-        font-size:10pt;
+    font-family:courier;
+    font-size:10pt;
 }
 
 img.icon {
