@@ -35,6 +35,7 @@ include ('functions.php');
         menuitem('Update Server','update.png','update.php');
         menuitem('SMART Status','smart.png','smart.php');
         menuitem('Change Hostname','ssh.png','edit-hostname.php');
+        menuitem('Change Password','psswd-icon.png','passwd-change.php');
 
     // Logs
         echo "<p class='menu-header'>Logs</p></br>";

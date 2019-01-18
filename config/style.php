@@ -39,6 +39,10 @@ p.pagetitle {
 	font-weight: bold;
 }
 
+table {
+    color: #e4e4e4;
+}
+
 p.menu-header {
 	font-weight: bold;
 	text-align: center;
