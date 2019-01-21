@@ -30,14 +30,19 @@
                     <br /> $menuname </a>
                 </div>";
     }
-    
+
 // Display SMART Drive statusech
     function smartstatus($diskheader,$disk) {
-        echo "<p class='menu-header'>$diskheader</p><br />";
-        echo "<div class='catout'>";
-            $print = shell_exec("sudo smartctl -i /dev/$disk");
-            echo $print;
-        echo "</div>";
+        // Grab SMART data from disks
+        $print = shell_exec("sudo smartctl -i /dev/$disk");
+
+        // Generate page
+        echo "
+            <p class='menu-header'>$diskheader</p><br />
+            <div class='catout'>";
+                $print
+            </div>
+        ";
     }
 
 ?>
