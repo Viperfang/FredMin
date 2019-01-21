@@ -1,18 +1,18 @@
 /*
 
 	David Collins-Cubit
-	2016
-	F*Panel Supa Lite
+	2018
+	FredMin NiNite
 	Control Panel for Web Developers
 
 */
 
 body {
-	background-color: #eaeaea;
+	background-color: #282728;
 }
 
 div.header {
-	background-color: #ffffff;
+	background-color: #4b4a4c;
 	width: 100%;
 	height: 90px;
 	top: 0;
@@ -21,6 +21,7 @@ div.header {
 }
 
 img.logo {
+	opacity: 0;
 	height: 90px;
 	top: 0;
 	left: 0;
@@ -28,30 +29,33 @@ img.logo {
 }
 
 p.pagetitle {
-	color: #000000;
+	color: #e5e5e5;
 	position: absolute;
 	width: 100%;
 	top: 10px;
 	text-align: center;
-	font-family: arial;
+	font-family: arial, helvetica, dejavu;
 	font-size: 20pt;
 	font-weight: bold;
+}
+
+table {
+    color: #e4e4e4;
 }
 
 p.menu-header {
 	font-weight: bold;
 	text-align: center;
-	border-width: 1px;
-	border-color: #dcdfe5;
-	border-style: solid;
-	background-color: #e8e8e8;
-	color: #000000;
+	background-color: #4e4e4e;
+	color: #e5e5e5;
 	font-size: 10pt;
+    font-family: arial, helvetica, dejavu;
 }
 
 div.menu {
-	background-color: #ffffff;
-	height: 100%;
+	background-color: #5e5e5e;
+	color: #e4e4e4;
+    height: 100%;
 	width: 160px;
 	position: fixed;
 	top: 0;
@@ -60,11 +64,18 @@ div.menu {
 	padding: 10px;
 	font-family: arial;
 	font-size:10pt;
+    font-family: arial, helvetica, dejavu;
+
+}
+
+a {
+    color: #e5e5e5;
 }
 
 p.copyright {
 	font-size: 10pt;
-	color:grey;
+	color: #e5e5e5;
+    font-family: arial, helvetica, dejavu;
 	bottom: 0;
 	left: 0;
 	padding: 10px;
@@ -86,11 +97,13 @@ div.content {
 	margin-left: 200px;
 	margin-right: 20px;
 	margin-bottom: 50px;
-	background-color: #ffffff;
+    color: #e5e5e5;
+	background-color: #5e5e5e;
 	border:2px;
 	padding: 20px;
 	font-family: arial;
 	text-align: left;
+    font-family: arial, helvetica, dejavu;
 }
 
 div.catout {
@@ -107,11 +120,12 @@ div.icon {
 	display: inline-block;
 	padding-right: 40px;
 	text-align: center;
+	color: #e5e5e5;
 }
 
 a.icon {
 	text-align: center;
 	font-size: 11px;
-	color: #315389;
+	color: #e5e5e5;
 	text-decoration: none;
 }
