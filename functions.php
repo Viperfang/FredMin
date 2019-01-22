@@ -47,4 +47,24 @@ function smartstatus($diskheader,$disk) {
     }
 }
 
+// Make Pretty Bargraphs - Purrrr...
+Function BarGraph ($value,$total,$barwidth,$barheight) {
+
+    // Calculates bargraph dimensions
+    $ratio = $barwidth/$total;
+    $barvaluewidth = $ratio*$value;
+
+    // Calculate percentage for else statement
+    $Percentage = ($total/100)*$value;
+
+    // Change bar colour depending on value
+    if ($Percentage > 80) {
+        $barcolour = "#e53b3b"; // Red
+    }
+
+    else {
+        $barcolour = "#5daffc"; // Blue
+    }
+}
+
 ?>
