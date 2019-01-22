@@ -3,8 +3,9 @@
 Download Stable:
 https://raw.githubusercontent.com/sn0wlink/FredMin/master/FredMin-1.0.zip
 
-A super small and lightweight Server Administration Tool small enough to fit on a floppy disk.
-Weighing in at under 50kb including images, this powerful little beast will happily sit on the most restricted servers on the cloud.
+A super small and lightweight Server Administration Too.
+This powerful little beast will happily sit on the most restricted servers
+in-house, or on the cloud.
 
 *Just remember to put it in a password protected folder.
 
