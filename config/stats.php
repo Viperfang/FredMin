@@ -7,24 +7,32 @@ echo '<strong>Server Info:</strong><br />';
 echo gethostname();
 echo '<br />';
 
-// echo explode(' ',explode(':',explode('inet addr',explode('eth0',trim(`ifconfig`))[1])[1])[1])[0];
+/*
 
-foreach(explode("\n\n",`ifconfig`) as $interface)
-	{
-		$interface = trim($interface);
-		if(strpos($interface,"inet ") == 0) continue; // no IP for interface, skip
-		echo substr($interface,0,strpos($interface,':') + 2); // interface name
-		foreach(explode("\n",$interface) as $line)
+// Viperfangs rather neat block of code
+// Currently broken on Debian
+
+foreach(explode("\n\n",`ifconfig`) as $interface){
+	$interface = trim($interface);
+	if(strpos($interface,"inet ") == 0) continue; // no IP for interface, skip
+	echo substr($interface,0,strpos($interface,':') + 2); // interface name
+	foreach(explode("\n",$interface) as $line)
 		{
 			if(strpos($line,'inet') === FALSE) continue;
 			$propcache = explode(' ',trim($line));
 			foreach($propcache as $prop) if(strpos($prop,'.') !== FALSE)
 			{
-				echo $prop . '<br />';
-				break 2;
-			}
+		echo $prop . '<br />';
+		break 2;
 		}
 	}
+}
+*/
+
+// Small IP list display
+$ServIP = shell_exec('hostname -I');
+echo $ServIP;
+
 echo '<br /><br />';
 
 // Uptime
