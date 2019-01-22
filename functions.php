@@ -36,8 +36,8 @@ function smartstatus($diskheader,$disk) {
     // Get SMART disk information
     $print = shell_exec("sudo smartctl -i /dev/$disk");
 
+    // If drive exists display to screen
     if (\strpos($print, '=== START OF INFORMATION SECTION ===') !== false) {
-        // Display to screen
         echo "
             <p class='menu-header'>$diskheader</p><br />
             <div class='catout'>
