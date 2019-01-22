@@ -7,7 +7,8 @@ echo '<strong>Server Info:</strong><br />';
 echo gethostname();
 echo '<br />';
 
-//echo explode(' ',explode(':',explode('inet addr',explode('eth0',trim(`ifconfig`))[1])[1])[1])[0];
+// echo explode(' ',explode(':',explode('inet addr',explode('eth0',trim(`ifconfig`))[1])[1])[1])[0];
+
 foreach(explode("\n\n",`ifconfig`) as $interface)
 	{
 		$interface = trim($interface);
@@ -26,19 +27,38 @@ foreach(explode("\n\n",`ifconfig`) as $interface)
 	}
 echo '<br /><br />';
 
+// Uptime
+$uptimecmd = shell_exec('uptime');
+$uptime = explode(" ", $uptimecmd);
+// Removes the comma
+$rmcom = str_ireplace(",","",$uptime[4]);
+echo "
+    <strong>Server Uptime:</strong><br />
+    $uptime[3] $rmcom
+    <br /><br />
+";
+
+// Uptime
+$unamecmd = shell_exec('uname -a');
+$os = explode(" ", $unamecmd);
+echo "
+    <strong>Server OS:</strong><br />
+    $os[5]
+    <br /><br />
+";
 
 // Print the Service Status
 echo '<strong>Services Online:</strong><br />';
 // Ping Apache
 ServiceOnline('Apache','localhost',80);
 
-//Ping MySql
+// Ping MySql
 ServiceOnline('MySQL','localhost',3306);
 
-//Ping SSH
+// Ping SSH
 ServiceOnline('SSH','localhost',22);
 
-//Ping Samba Share
+// Ping Samba Share
 ServiceOnline('Samba','localhost',445);
 
 // Print the Software Versions
