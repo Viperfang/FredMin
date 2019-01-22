@@ -38,12 +38,22 @@ echo "
     <br /><br />
 ";
 
-// Uptime
-$unamecmd = shell_exec('uname -a');
-$os = explode(" ", $unamecmd);
+// Print OS Name
+$fullstring = shell_exec('cat /etc/os-release');
+$parsed = get_string_between($fullstring, 'PRETTY_NAME="', '"');
+
+function get_string_between($string, $start, $end){
+    $string = ' ' . $string;
+    $ini = strpos($string, $start);
+    if ($ini == 0) return '';
+    $ini += strlen($start);
+    $len = strpos($string, $end, $ini) - $ini;
+    return substr($string, $ini, $len);
+}
+
 echo "
     <strong>Server OS:</strong><br />
-    $os[5]
+    $parsed
     <br /><br />
 ";
 
