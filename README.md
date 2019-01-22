@@ -25,8 +25,8 @@ Have fun, and run with it!
 
 ![image](https://raw.githubusercontent.com/sn0wlink/FredMin/master/screenshot.png)
 
-# Contribution Rules
+## Contribution Rules
 4 Spaces - NOT tabs... (please)
 
-Contributors:
+## Contributors:
 With great thanks to Ben Viperfang Bewick (for his help, support and general awesomeness)
