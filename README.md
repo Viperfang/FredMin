@@ -3,7 +3,7 @@
 Download Stable:
 https://raw.githubusercontent.com/sn0wlink/FredMin/master/FredMin-1.0.zip
 
-A super small and lightweight Server Administration Too.
+A super small and lightweight Server Administration Tool.
 This powerful little beast will happily sit on the most restricted servers
 in-house, or on the cloud.
 
