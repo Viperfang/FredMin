@@ -45,11 +45,11 @@ echo '<br />';
 $uptimecmd = shell_exec('uptime');
 $uptime = explode(" ", $uptimecmd);
 // Removes the comma
-$rmcom = str_ireplace(",","",$uptime[4]);
+$rmcom = str_replace(",","",$uptime[4]);
 echo "
     <br />
     <strong>Server Uptime:</strong><br />
-    $uptime[3] $rmcom
+    $uptime[3] - $rmcom
     <br /><br />
 ";
 

@@ -18,7 +18,7 @@ SrvPing ('Teal Website','tealpress.com','80');
 SrvPing ('Virtual Server','192.168.0.10','8006');
 SrvPing ('Development Server','192.168.0.211','80');
 SrvPing ('Workstation','127.0.0.1','80');
-SrvPing ('Mail Server','192.168.0.10','8006');
+SrvPing ('Mail Server','192.168.0.11','25');
 SrvPing ('Picking Server','192.168.0.2','80');
 SrvPing ('Mirror Server','192.168.0.6','80');
 SrvPing ('Opera Server','192.168.0.243','445');
