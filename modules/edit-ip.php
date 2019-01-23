@@ -1,13 +1,5 @@
 <?php
 
-// ====================================================
-//
-//  - Alpha Development
-//    Do not use
-//
-// ====================================================
-
-
 // Page name
 $pagename ="IP Address Editor";
 
@@ -20,8 +12,8 @@ include ('../functions.php');
 $readfile = shell_exec('sudo cat /etc/network/interfaces');
 
 // Get current IP address
-$currentip = shell_exec('hostname -I');
-
+$getip = shell_exec('hostname -I');
+$currentip = str_replace(' ','',$getip);
 // Display Header Bar
 echo "<p class='menu-header'>Edit IP Address</p><br />";
 
@@ -45,7 +37,7 @@ $text_box = $_POST["text_box"];
 if ($text_box != ""){
 
     $srchreplace = str_replace($currentip,$text_box,$readfile);
-    echo $srchreplace;
+    echo "<br /><strong>Please restart your server to enable changes</strong><br /><br /><pre>$srchreplace</pre>";
     shell_exec('echo $srchreplace | sudo tee /var/www/html/FredMin/modules/test.txt');
 }
 
