@@ -19,9 +19,11 @@ echo "<p class='menu-header'>Edit IP Address</p><br />";
 
 // Detect Static IP
 if (strpos($readfile, 'address') !== false) {
-        echo 'YEY - STATIC IP DETECTED <p />';
+    echo 'YEY - STATIC IP DETECTED <p />';
 }
-
+else {
+    echo '<h3>No static IP detected!</h3>';
+}
 // Displays current IP address
 echo "Your servers IP address is: $currentip";
 
