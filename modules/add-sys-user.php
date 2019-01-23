@@ -8,6 +8,8 @@ include ('./config/config.php');
 include ('head.php');
 include ('../functions.php');
 
+echo "<p class='menu-header'>Adds New System User</p><br />";
+
 echo "<form method='post' action='add-sys-user.php'>
         <p>* Required Fields.</p>
         <table>

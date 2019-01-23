@@ -32,7 +32,7 @@ if (strpos($readfile, 'address') !== false) {
 }
 else {
     // Display error
-    echo '<h3>No static IP detected!</h3>';
+    echo '<h3><center><p>Huff...</p>No static IP detected!</center></h3>';
 }
 
 // Displays current IP config
