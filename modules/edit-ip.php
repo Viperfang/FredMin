@@ -21,7 +21,7 @@ echo "<p class='menu-header'>Edit IP Address</p><br />";
 if (strpos($readfile, 'address') !== false) {
 
     // Displays current IP address
-    echo "Your servers IP address is: $currentip";
+    echo "Your servers IP address is: $currentip <br /><br />";
 
     // Generate Form
     echo "<form name='form' method='post' action='edit-ip.php'>
