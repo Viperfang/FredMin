@@ -1,6 +1,6 @@
 /*
 
-	David Collins-Cubit
+    David Collins-Cubit
 	2016
 	F*Panel Supa Lite
 	Control Panel for Web Developers
@@ -12,23 +12,23 @@ body {
 }
 
 div.header {
-	background-color: #ffffff;
+	background-color: RGB(58,71,162);
 	width: 100%;
-	height: 90px;
+	height: 80px;
 	top: 0;
 	left:0;
 	position: fixed;
 }
 
 img.logo {
-	height: 90px;
-	top: 0;
-	left: 0;
+	height: 50px;
+	top: 15;
+	left: 10;
 	position: fixed;
 }
 
 p.pagetitle {
-	color: #000000;
+	color: #ffffff;
 	position: absolute;
 	width: 100%;
 	top: 10px;
@@ -56,7 +56,7 @@ div.menu {
 	position: fixed;
 	top: 0;
 	left: 0;
-	margin-top: 90px;
+	margin-top: 80px;
 	padding: 10px;
 	font-family: arial;
 	font-size:10pt;
@@ -82,7 +82,7 @@ input {
 }
 
 div.content {
-	margin-top: 110px;
+	margin-top: 100px;
 	margin-left: 200px;
 	margin-right: 20px;
 	margin-bottom: 50px;
@@ -100,7 +100,7 @@ div.catout {
 }
 
 img.icon {
-	height: 30px;
+	height: 50px;
 }
 
 div.icon {

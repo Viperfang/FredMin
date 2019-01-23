@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="/home/sn0wlink/header.png"
+   inkscape:export-xdpi="120.98538"
+   inkscape:export-ydpi="120.98538"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.86772068"
+     inkscape:cx="390.1089"
+     inkscape:cy="833.74477"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:36.8092041px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.92023009"
+       x="22.67738"
+       y="109.29823"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         x="22.67738"
+         y="109.29823"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Ultra-Light';letter-spacing:1.32291663px;fill:#ffffff;stroke-width:0.92023009">FredMin</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.23912716px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ecd100;fill-opacity:1;stroke:none;stroke-width:0.18097816;"
+       x="45.294781"
+       y="119.67949"
+       id="text12-2"><tspan
+         sodipodi:role="line"
+         id="tspan10-6"
+         x="45.294781"
+         y="119.67949"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ecd100;stroke-width:0.18097816;fill-opacity:1;">LIGHTWEIGHT SYSTEM CONTROL</tspan></text>
+    <circle
+       style="fill:#1dd21d;fill-opacity:1;stroke:none;stroke-width:2.46499991;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="path913"
+       cx="10.593829"
+       cy="96.325745"
+       r="7.6339769" />
+  </g>
+</svg>

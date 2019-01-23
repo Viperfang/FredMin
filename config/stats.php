@@ -10,7 +10,9 @@ echo '<br />';
 /*
 
 // Viperfangs rather neat block of code
-// Currently broken on Debian
+// Working on Arch, Ubuntu
+// Currently broken on Debian / It's still pretty cool!
+// Code Gay...
 
 foreach(explode("\n\n",`ifconfig`) as $interface){
 	$interface = trim($interface);
@@ -32,8 +34,12 @@ foreach(explode("\n\n",`ifconfig`) as $interface){
 // Small IP list display
 $ServIP = shell_exec('hostname -I');
 echo $ServIP;
+echo '<br />';
 
-echo '<br /><br />';
+// Client IP
+echo '<br /><strong>Your IP:</strong><br />';
+echo $_SERVER['REMOTE_ADDR'];
+echo '<br />';
 
 // Uptime
 $uptimecmd = shell_exec('uptime');
@@ -41,6 +47,7 @@ $uptime = explode(" ", $uptimecmd);
 // Removes the comma
 $rmcom = str_ireplace(",","",$uptime[4]);
 echo "
+    <br />
     <strong>Server Uptime:</strong><br />
     $uptime[3] $rmcom
     <br /><br />
@@ -96,22 +103,20 @@ echo 'Memory Usage: ';
 echo ServMem();
 echo '%<br />';
 
-
 // Footer Infomation
 echo '<br />';
 echo "<p class='copyright'>&copy; 2016 Fred
 <br />Powered by Tea &amp; 1 Jammie Dodger</p>";
 
-
 // Ping Services for Online Status
 function ServiceOnline($ServiceName,$IpAddress,$Port) {
 		if (!$socket = @fsockopen($IpAddress, $Port, $errno, $errstr, 30)) {
-		echo "<img class='onlinestatus' src='images/offline.ico'> $ServiceName<br />";
+		echo "<img class='onlinestatus' src='images/offline.jpg'> $ServiceName<br />";
 	}
 
 	else
 	{
-		echo "<img class='onlinestatus' src='images/online.ico'> $ServiceName<br />";
+		echo "<img class='onlinestatus' src='images/online.jpg'> $ServiceName<br />";
 		fclose($socket);
 	}
 }

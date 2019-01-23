@@ -1,12 +1,9 @@
 
     = Features to add =
 Stats:
-    System Uptime
-    OS
     FredMin Version
     disk usage bar graph (from functions library)
     Apache bandwidth
-    Client IP (apache)
 
 Cronjob Maker
 FTP User Manager
