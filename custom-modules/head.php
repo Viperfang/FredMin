@@ -18,7 +18,7 @@
 </div>
 
 <div class='menu'>
-		<a href='../../index.php'>Back to Homepage</a>
+		<a class='back' href='../../index.php'> < Back to Homepage</a>
 </div>
 
 <div class='content'>
