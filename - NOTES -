@@ -1,10 +1,8 @@
 
-    = Features to add =
-Stats:
+= Features to add =
+    add-sys-user (fix to get working)
     FredMin Version
-    disk usage bar graph (from functions library)
     Apache bandwidth
-    IP Changer - add 'if' for DHCP
-Cronjob Maker
-FTP User Manager
-Extended File Browser
+    Cronjob Maker
+    FTP User Manager
+    Extended File Browser
