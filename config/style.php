@@ -27,6 +27,14 @@ img.logo {
 	position: fixed;
 }
 
+a.back {
+    color: RGB(58,71,162);
+    font-family: arial;
+    font-weight: bold;
+	font-size:10pt;
+    text-decoration: none;
+}
+
 p.pagetitle {
 	color: #ffffff;
 	position: absolute;
