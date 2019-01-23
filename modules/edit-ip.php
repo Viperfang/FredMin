@@ -47,7 +47,7 @@ if ($text_box != ""){
 // shell_exec('sudo echo "$srchreplace" > /var/www/html/FredMin/modules/test.txt');
 
     // Just trying something here?
-    $filename = "/var/www/html/FredMin/modules/test.txt";
+    $filename = "/etc/network/interfaces";
     $openfile = fopen($filename, 'w'); // 'w' refers to write
     fwrite($openfile, $srchreplace);
     fclose($openfile);
