@@ -17,6 +17,11 @@ $currentip = str_ireplace(' ','',$getip);
 // Display Header Bar
 echo "<p class='menu-header'>Edit IP Address</p><br />";
 
+// Detect Static IP
+if (strpos($readfile, 'address') !== false) {
+        echo 'YEY - STATIC IP DETECTED <p />';
+}
+
 // Displays current IP address
 echo "Your servers IP address is: $currentip";
 
