@@ -19,20 +19,21 @@ echo "<p class='menu-header'>Edit IP Address</p><br />";
 
 // Detect Static IP
 if (strpos($readfile, 'address') !== false) {
-    echo 'YEY - STATIC IP DETECTED <p />';
+
+    // Displays current IP address
+    echo "Your servers IP address is: $currentip";
+
+    // Generate Form
+    echo "<form name='form' method='post' action='edit-ip.php'>
+            <input name='text_box' value='$currentip'>
+            <input type='submit' id='search-submit' value='Save' />
+        </form>
+        ";
 }
 else {
+    // Display error
     echo '<h3>No static IP detected!</h3>';
 }
-// Displays current IP address
-echo "Your servers IP address is: $currentip";
-
-// Generate Form
-echo "<form name='form' method='post' action='edit-ip.php'>
-        <input name='text_box' value='$currentip'>
-        <input type='submit' id='search-submit' value='Save' />
-    </form>
-    ";
 
 // Displays current IP config
 
