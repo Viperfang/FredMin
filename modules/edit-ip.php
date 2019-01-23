@@ -17,9 +17,6 @@ $currentip = str_ireplace(' ','',$getip);
 // Display Header Bar
 echo "<p class='menu-header'>Edit IP Address</p><br />";
 
-// Tims Thing
-echo "<pre>".$readfile."</pre>";
-
 // Displays current IP address
 echo "Your servers IP address is: $currentip";
 
@@ -40,17 +37,22 @@ $text_box = $_POST["text_box"];
 if ($text_box != ""){
 
     $srchreplace = str_ireplace($currentip,$text_box."\n",$readfile);
-    echo "<br /><strong>
-    Please restart your server to enable changes
-    </strong><br /><pre>$srchreplace</pre>";
+    echo "
+    <br />
+    <strong>Please restart your server to enable changes</strong>
+    <br />
 
-// shell_exec('sudo echo "$srchreplace" > /var/www/html/FredMin/modules/test.txt');
+    <form action='restart-server.php' method='post'>
+    <input type='submit' value='Restart Now' />
+    </form>
 
-    // Just trying something here?
-    $filename = "/etc/network/interfaces";
-    $openfile = fopen($filename, 'w'); // 'w' refers to write
-    fwrite($openfile, $srchreplace);
-    fclose($openfile);
+    <form action='../index.php' method='post'>
+    <input type='submit' value='Restart Later' />
+    </form>
+    ";
+
+    shell_exec("sudo echo '$srchreplace' > /etc/network/interfaces");
+
 }
 
 // Footer
