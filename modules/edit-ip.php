@@ -37,8 +37,8 @@ $text_box = $_POST["text_box"];
 if ($text_box != ""){
 
     $srchreplace = str_replace($currentip,$text_box,$readfile);
-    echo "<br /><strong>Please restart your server to enable changes</strong><br /><br /><pre>$srchreplace</pre>";
-    shell_exec('echo $srchreplace | sudo tee /var/www/html/FredMin/modules/test.txt');
+    echo "<br /><strong>Please restart your server to enable changes</strong><br /><pre>$srchreplace</pre>";
+    shell_exec('sudo echo "$srchreplace" > /var/www/html/FredMin/modules/test.txt');
 }
 
 // Footer

@@ -102,7 +102,7 @@ div.content {
 }
 
 div.catout {
-	white-space: pre-line;
+    white-space: pre-line;
     font-family:courier;
     font-size:10pt;
 }
