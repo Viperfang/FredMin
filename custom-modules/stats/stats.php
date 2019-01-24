@@ -14,8 +14,6 @@ cmdline('System Uptime','uptime');
 cmdline('Operating System','uname -a');
 cmdline('System Time','date');
 
-// cmdline('Installed Packages','apt list --installed | less');
-
 echo "<p><strong>System Usage:</strong></p>";
 
 // Bar Graph Display
@@ -41,23 +39,23 @@ function cmdline($name,$cmd) {
 
 // Bar Graph Generator
 Function BarGraph ($value,$total,$barwidth,$barheight) {
-    
+
     // Calculates bargraph dimensions
     $ratio = $barwidth/$total;
     $barvaluewidth = $ratio*$value;
-    
+
     // Calculate percentage for else statement
     $Percentage = ($total/100)*$value;
-    
+
     // Change bar colour depending on value
     if ($Percentage > 80) {
         $barcolour = "#e53b3b"; // Red
     }
-    
+
     else {
         $barcolour = "#5daffc"; // Blue
     }
-    
+
     echo "
         <div style='
             background-color: #cccccc;
