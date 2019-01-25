@@ -1,8 +1,15 @@
 
-= Features to add =
-    add-sys-user (fix to get working)
+    = Features to add =
+Stats:
     FredMin Version
+    disk usage bar graph (from functions library)
     Apache bandwidth
-    Cronjob Maker
-    FTP User Manager
-    Extended File Browser
+    IP Changer - add 'if' for DHCP
+Cronjob Maker
+FTP User Manager
+Extended File Browser
+
+- Active Directory for Linux -
+The ability to add a user to all servers/clients in a cluster.
+Giving the ability to remotely lockout a user from all systems simultaneously.
+(explode the /etc/passwd, append a user and rsync to clients).
