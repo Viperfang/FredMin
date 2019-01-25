@@ -11,7 +11,6 @@ include ('functions.php');
 // CONTENT
 
     // Restart Services
-
         echo "<p class='menu-header'>Restart Services</p><br />";
 
         menuitem('Restart Apache','apache.png','restart-apache.php');
@@ -35,17 +34,24 @@ include ('functions.php');
         menuitem('Update Server','update.png','update.php');
         menuitem('SMART Status','smart.png','smart.php');
         menuitem('Change Hostname','ssh.png','edit-hostname.php');
-        menuitem('Change Password','psswd-icon.png','passwd-change.php');
         menuitem('Change IP Address','ip.png','edit-ip.php');
+
+    // Administration
+        echo "<p class='menu-header'>Administration</p></br>";
+
+        menuitem('Change Password','psswd-icon.png','passwd-change.php');
         menuitem('Add User','user.png','add-sys-user.php');
+        menuitem('Remove User','rm-user.png','remove-user.php');
     // Logs
         echo "<p class='menu-header'>Logs</p></br>";
+
         menuitem('Auth Log','log.png','authlog.php');
         menuitem('Kernal Log','log.png','kernallog.php');
         menuitem('Debug Log','log.png','debuglog.php');
 
     // Custom Plugins
         echo "<p class='menu-header'>Custom Modules</p></br>";
+
         include ('custom-modules/config.php');
 
 // Footer

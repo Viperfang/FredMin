@@ -1,17 +1,17 @@
 <?php
 
 // Page name
-$pagename ="Password Changer";
+$pagename ="Remove Users";
 
 // Include Files
 include ('./config/config.php');
 include ('head.php');
 include ('../functions.php');
 
-echo "<p class='menu-header'>Reset User Password</p><br />
-      Change existing user password <br /><br />";
+echo "<p class='menu-header'>Remove user and files</p><br />
+      Warning - This will remove user and data.<br /><br />";
 
-echo "<form method='post' action='passwd-change.php'>
+echo "<form method='post' action='remove-user.php'>
         <table>
         <tr>
             <td>
@@ -24,18 +24,8 @@ echo "<form method='post' action='passwd-change.php'>
         </tr>
 
         <tr>
-            <td>
-            Password:
-            </td>
-
-            <td>
-            <input name='password' size='40' value=''>
-            </td>
-        </tr>
-
-        <tr>
         <td>
-        <input type='submit' id='submit' value='submit' />
+        <input type='submit' id='submit' value='Remove User' />
         </td>
         </tr>
 
@@ -45,10 +35,9 @@ echo "<form method='post' action='passwd-change.php'>
 ";
 
 $userset = $_POST["username"];
-$passwd = $_POST["password"];
 
 if ($_POST != ""){
-    shell_exec("echo -e '$passwd\n$passwd' | sudo passwd $userset");
+    $cmdline = shell_exec("sudo userdel -r -f $userset");
     // echo "<pre>$cmdline</pre>";
     // echo "<p>changed $userset's password - Success. $passwd</p>";
 }

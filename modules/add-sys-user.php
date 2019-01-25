@@ -86,7 +86,7 @@ if ($_POST != ""){
 $cmd = shell_exec("
     echo '$pw1\n$pw2\n$fn\n$rn\n$wn\n$hn\n$otr' | sudo adduser $uname
 ");
-    echo "<p><strong>User created - $uname - Success!</strong></p>";
+    // echo "<p><strong>User created - $uname - Success!</strong></p>";
 }
 
 // Footer
