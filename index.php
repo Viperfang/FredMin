@@ -14,7 +14,6 @@
         // no config file? Don't panic, load the plugin manager and load it
         // to trigger a plugin load.
         $config = array(
-            'plugins' => array('core'),
             'plugins_enabled' => array('core'),
             'stats' => array(),
             'branding'=>'FredMin'
