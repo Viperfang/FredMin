@@ -8,7 +8,7 @@ include ('../head.php');
 include ('../config/config.php');
 
 // Main Content
-echo "<h2>Test Program</h2>";
+echo "<h2><center>$pagename</center></h2>";
 
 phpinfo();
 
