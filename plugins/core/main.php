@@ -87,10 +87,12 @@
                 $content[] = "<p class='menu-header'>$key</p><br />\n";
                 foreach($graph[$key] as $page)
                 {
+                    $imgfile = "plugins/{$page['plugin']}/{$page['id']}.png";
+                    if(!file_exists($imgfile)) $imgfile = 'images/defaulticon.png';
                     $content[] = "
             <div class='icon'>
                 <a class='icon' href='?mod={$page['id']}'>
-                <img class='icon' src='plugins/{$page['plugin']}/{$page['id']}.png'>
+                <img class='icon' src='$imgfile'>
                 <br /> {$page['title']} </a>
             </div>";
                 }
