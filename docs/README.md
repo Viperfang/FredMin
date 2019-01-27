@@ -23,10 +23,10 @@ Have fun, and run with it!
 ![image](https://raw.githubusercontent.com/sn0wlink/FredMin/master/screenshot.png)
 
 ## Contribution Rules
-Spaces not tabs (4 spaces)
-No Javascript
-Try to keep to 80 width
-There’s a way that works… and there’s the way it should be written. Nice code!
+    Spaces not tabs (4 spaces)
+    No Javascript
+    Try to keep to 80 width
+    There’s a way that works… and there’s the way it should be written. Nice code!
 
 
 ## Contributors:
