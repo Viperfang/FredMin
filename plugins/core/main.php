@@ -29,7 +29,10 @@
         
         function getPages()
         {
-            return array('index','plugman');
+            return array(
+                array('id'=>'index','title'=>'Welcome','hidden'=>'true'),
+                array('id'=>'plugman','title'=>'Plugin Manager')
+            );
         }
         
         function loadPage($id)
@@ -37,13 +40,13 @@
             switch($id)
             {
             case 'index':
-                return array('title'=>'Index','content'=>$this->loadindex());
+                return $this->loadindex();
                 break;
             case 'plugman':
-                return array('title'=>'Plugin Manager','content'=>$this->loadplugman());
+                return $this->loadplugman();
                 break;
-            default:
-                return array('Invalid page',"Core module does is not responsible for page '$id'");
+            default: // If this runs, we got problems
+                return "Core module does is not responsible for page '$id'";
                 break;
             }
         }
