@@ -12,14 +12,19 @@
             return "Provides index and plugin manager";
         }
         
-        function getStats()
-        {
-            return array(); // Nope, none!
-        }
-        
         function install()
         {
             return; // No dep checks, no massiv config options, nothin!
+        }
+        
+        function init()
+        {
+            return; // no startup required.
+        }
+        
+        function getStats()
+        {
+            return array(); // Nope, none!
         }
         
         function getPages()
@@ -32,10 +37,10 @@
             switch($id)
             {
             case 'index':
-                return array('Index',$this->loadindex());
+                return array('title'=>'Index','content'=>$this->loadindex());
                 break;
             case 'plugman':
-                return array('Index',$this->loadplugman());
+                return array('title'=>'Plugin Manager','content'=>$this->loadplugman());
                 break;
             default:
                 return array('Invalid page',"Core module does is not responsible for page '$id'");
