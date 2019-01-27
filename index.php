@@ -11,7 +11,6 @@ include ('functions.php');
 // CONTENT
 include ('modules.php');
 
-
 // Footer
 include ('foot.php');
 
