@@ -1,6 +1,6 @@
 <?php
 
 // Website Name
-$controlname = 'Fredmin';
+$controlname = 'FredMin';
 
 ?>
