@@ -43,7 +43,7 @@
             switch($id)
             {
             case 'logs':
-                return content();
+                return $this->$codebase;
                 break;
             default: // If this runs, we got problems
                 return "LogView module is not responsible for page '$id'";
@@ -53,7 +53,7 @@
 
         // Content
         function content() {
-            echo "
+            $codebase = "
             <form action='#' method='request'>
             <select name='log[]'>
             <option value='/var/log/kern.log'>Kernal</option>
