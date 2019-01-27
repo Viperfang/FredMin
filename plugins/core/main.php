@@ -55,7 +55,8 @@
         {
             return array(
                 array('id'=>'index','title'=>'Welcome','hidden'=>'true'),
-                array('id'=>'plugman','title'=>'Plugin Manager','group'=>'Maintenance')
+                array('id'=>'plugman','title'=>'Plugin Manager','group'=>'Maintenance'),
+                array('id'=>'statman','title'=>'Statistic Manager','group'=>'Maintenance')
             );
         }
         
@@ -68,6 +69,9 @@
                 break;
             case 'plugman':
                 return $this->loadplugman();
+                break;
+            case 'statman':
+                return $this->loadstatman();
                 break;
             default: // If this runs, we got problems
                 return "Core module is not responsible for page '$id'";
@@ -162,6 +166,11 @@
     </form>
 EOC;
             return $content;
+        }
+        
+        function loadstatman()
+        {
+            return "This is statman";
         }
         
     }
