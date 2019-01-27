@@ -15,7 +15,7 @@
         
         function DependencyCheck()
         {
-            return; // No dep checks, no massiv config options, nothin!
+            return false; // No dep checks, no massiv config options, nothin!
         }
         
         function init()
