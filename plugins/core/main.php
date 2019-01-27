@@ -14,7 +14,7 @@
             return "Provides index and plugin manager";
         }
         
-        function install()
+        function DependencyCheck()
         {
             return; // No dep checks, no massiv config options, nothin!
         }
@@ -61,7 +61,7 @@
                 return $this->loadplugman();
                 break;
             default: // If this runs, we got problems
-                return "Core module does is not responsible for page '$id'";
+                return "Core module is not responsible for page '$id'";
                 break;
             }
         }
@@ -106,9 +106,28 @@
             
             global $plugins, $config;
             
+            $allplugins = $plugins;
+            
+            $dirscan = scandir('plugins');
+            unset($dirscan[1]); unset($dirscan[0]);
+            foreach($dirscan as $pluginfile)
+            {
+                // Is this plugin inactive?
+                if(!isset($plugins[$pluginfile]))
+                {
+                    if(!file_exists("plugins/$pluginfile/main.php"))
+                    {
+                        $errors[] = "Error prepareing $pluginfile, no main.php";
+                        continue;
+                    }
+                    include("plugins/$pluginfile/main.php");
+                    $allplugins[$pluginfile] = new $pluginfile();
+                }
+            }
+            
             $pluginlist = array();
-            ksort($plugins);
-            foreach($plugins as $id => $plugin)
+            ksort($allplugins);
+            foreach($allplugins as $id => $plugin)
             {
                 if(array_search($id, $config['plugins_enabled']) === FALSE)
                     $modchecked = "";
