@@ -43,7 +43,7 @@
             switch($id)
             {
             case 'logs':
-                return $this->$codebase;
+                return $this->content();
                 break;
             default: // If this runs, we got problems
                 return "LogView module is not responsible for page '$id'";
@@ -67,7 +67,6 @@
             </select>
             <input type='submit' name='submit' value='Go' />
             </form>
-            ";
 
             if(isset($_REQUEST['submit'])){
                 foreach ($_REQUEST['log'] as $logfile) {
@@ -75,6 +74,10 @@
                     echo "<div class='catout'>$printkern</div>";
                 }
             }
+
+            ";
+
+
 
         }
 
