@@ -28,6 +28,8 @@ Have fun, and run with it!
 - Try to keep to 80 width
 - There’s a way that works… and there’s the way it should be written. Nice code!
 
+## Code of Conduct
+Be excellent to each other!
 
 ## Contributors:
 With great thanks to Ben Viperfang Bewick (for his help, support and general awesomeness)
