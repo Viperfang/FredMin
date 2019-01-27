@@ -18,7 +18,8 @@
             'stats' => array(),
             'branding'=>'FredMin'
         );
-       file_put_contents('config.json', json_encode($config));
+       if(file_put_contents('config.json', json_encode($config)) == FALSE)
+           $errors [] = "Config file write failed: check permissions.";
        $activepage = 'plugman';
        $errors[] = "Failed to find config, defaults reloaded. Run Plugin Manager to begin.";
     }
