@@ -10,6 +10,8 @@ include ('../config/config.php');
 // Main Content
 echo "<h2>Test Program</h2>";
 
+phpinfo();
+
 // Footer
 include ('foot.php');
 ?>
