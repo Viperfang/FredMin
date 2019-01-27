@@ -2,6 +2,8 @@
     
     class core
     {
+        private $plugman_saved = false;
+        
         function getName()
         {
             return "Core";
@@ -19,7 +21,20 @@
         
         function init()
         {
-            return; // no startup required.
+            global $config, $errors;
+            if(isset($_REQUEST['plugman-update']))
+            {
+                $newplugins = array();
+                if(isset($_REQUEST['pm'])) $newplugins = array_keys($_REQUEST['pm']);
+                if(array_search('core',$newplugins) === FALSE)
+                {
+                    array_push($newplugins,'core');
+                    $errors[] = 'Forced enabling of core plugin: required for operation';
+                }
+                $config['plugins_enabled'] = $newplugins;
+                $this->plugman_saved = true;
+            }
+            return;
         }
         
         function getStats()
@@ -86,7 +101,37 @@
         
         function loadplugman()
         {
-            return "Here be plugin manager";
+            if($this->plugman_saved)
+                return "<p>Changes have been saved</p>\n<p><a href=\"?\">Home</a></p>";
+            
+            global $plugins, $config;
+            
+            $pluginlist = array();
+            ksort($plugins);
+            foreach($plugins as $id => $plugin)
+            {
+                if(array_search($id, $config['plugins_enabled']) === FALSE)
+                    $modchecked = "";
+                else
+                    $modchecked = " checked";
+                $pluginlist[] = '<tr><td>'.
+                    $plugin->getName().'</td><td>'.
+                    $plugin->getDescription().'</td><td>'.
+                    "<label for=\"chk$id\">Enabled</label>".
+                    "<input id=\"chk$id\" type=\"checkbox\" name=\"pm[$id]\"$modchecked/></td></tr>";
+            }
+            
+            $pluginlist = implode("\n\t\t",$pluginlist);
+            $content = <<<EOC
+    <form method="post">
+    <table style="border: 1px black solid;">
+        <tr><th>Name</th><th>Description</th><th>Control</th></tr>
+        $pluginlist
+    </table>
+    <input type="submit" name="plugman-update" value="Save" />
+    </form>
+EOC;
+            return $content;
         }
         
     }
