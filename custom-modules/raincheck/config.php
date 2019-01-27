@@ -1,0 +1,3 @@
+<?php
+$appname ="Rain Check";
+?>
