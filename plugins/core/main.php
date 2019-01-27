@@ -9,7 +9,7 @@
         
         function getDescription()
         {
-            return "Privades index and plugin manager";
+            return "Provides index and plugin manager";
         }
         
         function getStats()
