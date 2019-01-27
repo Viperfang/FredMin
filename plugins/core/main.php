@@ -16,7 +16,7 @@
         
         function DependencyCheck()
         {
-            return; // No dep checks, no massiv config options, nothin!
+            return true; // No dep checks, no massiv config options, nothin!
         }
         
         function init()
@@ -31,7 +31,16 @@
                     array_push($newplugins,'core');
                     $errors[] = 'Forced enabling of core plugin: required for operation';
                 }
-                $config['plugins_enabled'] = $newplugins;
+                $approved_plugins = array();
+                foreach($newplugins as $plugin)
+                {
+                    include_once("plugins/$plugin/main.php");
+                    if((new $plugin())->DependencyCheck())
+                        $approved_plugins[] = $plugin;
+                    else
+                        $errors[] = "Plugin activation failed: $plugin (Dependency check failed)";
+                }
+                $config['plugins_enabled'] = $approved_plugins;
                 $this->plugman_saved = true;
             }
             return;

@@ -37,7 +37,7 @@
             $errors[] = "Plugin load failed: File not found: $plugin";
             continue;
         }
-        include("plugins/$plugin/main.php");
+        include_once("plugins/$plugin/main.php");
         $plugins[$plugin] = new $plugin();
         $plugins[$plugin]->init();
         foreach($plugins[$plugin]->getStats() as $stat)
