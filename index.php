@@ -41,8 +41,8 @@
         include_once("plugins/$plugin/main.php");
         $plugins[$plugin] = new $plugin();
         $plugins[$plugin]->init();
-        foreach($plugins[$plugin]->getStats() as $stat)
-            $statindex[$stat] = $plugin;
+        foreach($plugins[$plugin]->getStats() as $id => $stat)
+            $statindex[$id] = $stat;
         foreach($plugins[$plugin]->getPages() as $page)
         {
             $pageindex[$page['id']] = $page;

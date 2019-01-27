@@ -31,7 +31,7 @@
         function getPages()
         {
             return array(
-                array('id'=>'test','title'=>'Log Viewer'),
+                array('id'=>'logview','title'=>'Log Viewer'),
             );
         }
 
@@ -39,11 +39,11 @@
         {
             switch($id)
             {
-            case 'test':
-                return "Test module loaded";
+            case 'logview':
+                return "Log View module loaded";
                 break;
             default: // If this runs, we got problems
-                return "Test module is not responsible for page '$id'";
+                return "LogView module is not responsible for page '$id'";
                 break;
             }
         }
