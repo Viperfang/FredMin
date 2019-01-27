@@ -31,7 +31,7 @@
         {
             return array(
                 array('id'=>'index','title'=>'Welcome','hidden'=>'true'),
-                array('id'=>'plugman','title'=>'Plugin Manager')
+                array('id'=>'plugman','title'=>'Plugin Manager','group'=>'Maintenance')
             );
         }
         
@@ -53,7 +53,35 @@
         
         function loadindex()
         {
-            return "Here be the index";
+            global $pageindex;
+            $graph = array();
+            $content = array();
+            
+            foreach($pageindex as $page)
+            {
+                if(isset($page['hidden'])) continue;
+                if(!isset($page['group'])) $page['group'] = 'Other';
+                if(!isset($graph[$page['group']])) $graph[$page['group']] = array();
+                $graph[$page['group']][$page['title']] = $page;
+            }
+            
+            ksort($graph);
+            foreach(array_keys($graph) as $key)
+            {
+                ksort($graph[$key]);
+                $content[] = "<p class='menu-header'>$key</p><br />\n";
+                foreach($graph[$key] as $page)
+                {
+                    $content[] = "
+            <div class='icon'>
+                <a class='icon' href='?mod={$page['id']}'>
+                <img class='icon' src='plugins/{$page['plugin']}/{$page['id']}.png'>
+                <br /> {$page['title']} </a>
+            </div>";
+                }
+            }
+            
+            return implode('',$content);
         }
         
         function loadplugman()
