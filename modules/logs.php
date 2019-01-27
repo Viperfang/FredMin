@@ -15,6 +15,11 @@ echo "
 <option value='/var/log/kern.log'>Kernal</option>
 <option value='/var/log/auth.log'>Authentication</option>
 <option value='/var/log/debug.log'>Debug</option>
+<option value='/var/log/messages'>Messages</option>
+<option value='/var/log/boot.log'>Boot</option>
+<option value='/var/log/dmesg'>Dmessage</option>
+<option value='/var/log/apt/history.log'>Apt History</option>
+<option value='/var/log/syslog'>syslog</option>
 </select>
 <input type='submit' name='submit' value='Go' />
 </form>
