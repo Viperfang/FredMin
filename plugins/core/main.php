@@ -48,7 +48,7 @@
         
         function getStats()
         {
-            return array(); // Nope, none!
+            return array('text'=>array('name'=>'Text','description'=>'Displays some text')); // Nope, none!
         }
         
         function getPages()

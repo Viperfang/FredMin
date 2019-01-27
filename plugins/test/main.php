@@ -25,7 +25,11 @@
         
         function getStats()
         {
-            return array(); // Nope, none!
+            return array();
+        }
+        
+        function getStat()
+        {
         }
         
         function getPages()
