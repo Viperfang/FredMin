@@ -1,40 +1,40 @@
 <?php
-    
-    class test
+
+    class logs
     {
-        
+
         function getName()
         {
-            return "Test";
+            return "Logs";
         }
-        
+
         function getDescription()
         {
-            return "Dummy plugin for Plugin Manager Testing";
+            return "A system log viewer";
         }
-        
+
         function DependencyCheck()
         {
             return true; // No dep checks, no massiv config options, nothin!
         }
-        
+
         function init()
         {
             return;
         }
-        
+
         function getStats()
         {
             return array(); // Nope, none!
         }
-        
+
         function getPages()
         {
             return array(
-                array('id'=>'test','title'=>'Test Module'),
+                array('id'=>'test','title'=>'Log Viewer'),
             );
         }
-        
+
         function loadPage($id)
         {
             switch($id)
@@ -47,5 +47,5 @@
                 break;
             }
         }
-        
+
     }
