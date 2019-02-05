@@ -48,23 +48,15 @@
         // Content
         function content() {
             ini_set('display_errors', 1);
-        }
 
-        // Smart Output
-        function smart() {
-            $cmd = shell_exec("sudo smartctl -i /dev/nvme0");
-            $diskarray = array('sda','sdb','sdc','sdd','sde','sdf','nvme0');
-
-                foreach ($diskarray as $diskheader) {
-                    if (\strpos($cmd, 'START') !== true) {
-                        $print = "
-                        <h1>Disk: $diskheader</h1><br />
-                        <div class='catout'>
-                        $cmd
-                        </div>
-                        ";
-                     echo $print;
-                    }
-                }
+            // Smart Output
+                $cmd = shell_exec("sudo smartctl -i /dev/sda");
+                $print = "
+                    <h1>Disk: $diskheader</h1><br />
+                    <div class='catout'>
+                    $cmd
+                    </div>
+                    ";
+                return $print;
         }
     }
