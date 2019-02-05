@@ -37,7 +37,6 @@
             {
             case 'smart':
                 return $this->content();
-                return $this->smart();
                 break;
             default: // If this runs, we got problems
                 return "SMART module is not responsible for page '$id'";
@@ -49,14 +48,16 @@
         function content() {
             ini_set('display_errors', 1);
 
+            $disk = "sda";
             // Smart Output
-                $cmd = shell_exec("sudo smartctl -i /dev/sda");
+                $cmd = shell_exec("sudo smartctl -i /dev/$disk");
                 $print = "
-                    <h1>Disk: $diskheader</h1><br />
+                    <h2>Disk: SDA</h2><br />
                     <div class='catout'>
                     $cmd
                     </div>
                     ";
+
                 return $print;
         }
     }
