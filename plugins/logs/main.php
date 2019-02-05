@@ -5,7 +5,7 @@
 
         function getName()
         {
-            return "Logs";
+            return "logs";
         }
 
         function getDescription()
