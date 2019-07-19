@@ -13,8 +13,9 @@ $read_host = shell_exec('sudo cat /etc/hosts');
 
 echo "
     <p class='menu-header'>Edit Hostname</p><br />
-	<strong>Current Name: </strong>$read_host<br />
-	
+	<strong>Current Name: </strong>$readfile<br />
+	<br />
+
     <form name='form' method='post' action='edit-hostname.php'>
         <input name='text_box' value='$readfile'>
         <input type='submit' id='search-submit' value='Save' />

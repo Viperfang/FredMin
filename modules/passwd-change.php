@@ -48,7 +48,7 @@ $userset = $_POST["username"];
 $passwd = $_POST["password"];
 
 if ($_POST != ""){
-    shell_exec("echo -e '$passwd\n$passwd' | sudo passwd $userset");
+    shell_exec("echo -e '$passwd\n$passwd\n' | sudo passwd $userset\n");
     // echo "<pre>$cmdline</pre>";
     // echo "<p>changed $userset's password - Success. $passwd</p>";
 }

@@ -27,7 +27,7 @@ echo "
 
 if(isset($_REQUEST['submit'])){
     foreach ($_REQUEST['log'] as $logfile) {
-        $printkern = shell_exec("sudo cat $logfile");
+        $printkern = shell_exec("cat $logfile");
         echo "<div class='catout'>$printkern</div>";
     }
 }
