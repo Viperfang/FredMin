@@ -10,7 +10,6 @@ include ('functions.php');
 
 // CONTENT
 include ('modules.php');
-// include ('custom-modules/config.php');
 
 // List Custom Module Names (alphabetical order)
 foreach (glob("custom-modules/*",GLOB_ONLYDIR) as $file) {

@@ -21,16 +21,6 @@ function softmenuitem($menuname,$iname,$fname) {
         </div>";
 }
 
-// Build Custom Module Icons
-function custommenuitem($menuname,$iname,$fname) {
-    echo "
-        <div class='icon'>
-            <a class='icon' href='custom-modules/$fname'>
-            <img class='icon' src='custom-modules/$iname'>
-            <br /> $menuname </a>
-        </div>";
-}
-
 // Display SMART Drive status
 function smartstatus($diskheader,$disk) {
     // Get SMART disk information
