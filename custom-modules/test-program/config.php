@@ -1,3 +1,0 @@
-<?php
-$appname ="Test Application";
-?>
