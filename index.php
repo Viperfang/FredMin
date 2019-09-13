@@ -18,7 +18,7 @@
             'stats' => array(),
             'branding'=>'FredMin'
         );
-        if(file_put_contents('config.json', json_encode($config)) == FALSE)
+        if(@file_put_contents('config.json', json_encode($config)) == FALSE)
             $errors [] = "Config file write failed: check permissions.";
         $activepage = 'plugman';
         $errors[] = "Failed to find config, defaults reloaded. Run Plugin Manager to begin.";
@@ -83,6 +83,11 @@
     // DEBUG
     //$tokens['CONTENT'] .= print_r($pageindex,true);
 
+    // update config if required.
+    if($config != (array) json_decode(@file_get_contents('config.json')))
+        if(@file_put_contents('config.json', json_encode($config)) == FALSE)
+            $errors [] = "Config file write failed: check permissions.";
+
     // load template
     $page = file_get_contents('template.html');
 
@@ -94,10 +99,5 @@
 
     // write to browser
     echo $page;
-
-    // update config if required.
-    if($config != (array) json_decode(file_get_contents('config.json')))
-        if(file_put_contents('config.json', json_encode($config)) == FALSE)
-            $errors [] = "Config file write failed: check permissions.";
 
 ?>
